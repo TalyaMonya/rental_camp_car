@@ -21,12 +21,12 @@ export const Title = styled.h1`
     max-width: 660px;
     text-align: center;
     color: #000000;
-    margin-bottom: 120px;
+    margin-bottom: 125px;
 `;
 
 export const QuoteWrap = styled.div`
 display: flex;
-    width: 350px;
+    width: 400px;
     padding: 5px 15px;
     background-color: ${(p) => p.theme.colors.lightgrey};
     border-radius: 33px;

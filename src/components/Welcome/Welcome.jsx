@@ -9,7 +9,7 @@ export const Welcome = () => {
                 <QuoteWrap>
                      <Quote>“The world is a book, and those who do not travel have time to read only the first page” - Art. Augustine.</Quote>
                 </QuoteWrap>
-                <NavLink>Find your camper</NavLink>
+                <NavLink to="/catalog">Find your camper</NavLink>
             </WrapperPage>
             
         </>

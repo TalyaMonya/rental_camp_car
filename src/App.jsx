@@ -1,27 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-import FirstPage from 'pages/FirstPage/FirstPage';
-import SecondPage from 'pages/SecondPage/SecondPage';
-import HalfPage from 'pages/HalfPage/HalfPage';
-import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './App.styled';
+import { lazy } from 'react';
 
-const test = import.meta.env.VITE_API_TEST;
+const WelcomePage = lazy(() => import("./pages/WelcomePage"))
 
 function App() {
-  console.log(test);
   return (
-    <AppWrapper>
+    <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route path="/first" element={<FirstPage />} />
-          <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
+          <Route index element={<WelcomePage />} />
+
           </Route>
-          <Route path="*" element={<ErrorPage />} />
-        </Route>
+          <Route path="*" element={<WelcomePage />} />
       </Routes>
-    </AppWrapper>
+    </>
   );
 }
 export default App;

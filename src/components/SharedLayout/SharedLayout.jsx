@@ -2,8 +2,9 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from 'components/Header/Header';
 import { AppLayout } from './SharedLayout.styled';
+import { GlobalStyles } from "../../styles/GlobalStyles";
 
-const SharedLayout = () => {
+export const SharedLayout = () => {
   return (
     <>
       <AppLayout>
@@ -14,8 +15,8 @@ const SharedLayout = () => {
       </Suspense>
         </main>
       </AppLayout>
+
+      <GlobalStyles/>
     </>
   );
 };
-
-export default SharedLayout;

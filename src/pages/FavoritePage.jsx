@@ -1,8 +1,10 @@
+import { Favorite } from "../components/Favorite/Favorite";
+
 
 export default function FavoritesPage() {
     return (
         <section>
-            <p>Favorites page !!!!</p>
+            <Favorite />
         </section>
     )
 }

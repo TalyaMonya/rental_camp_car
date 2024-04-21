@@ -1,9 +1,10 @@
+import { Catalog } from "../components/Catalog/Catalog";
 
 export default function CatalogPage() {
     
     return (
         <section>
-            <p>Hello my friend</p>
+            <Catalog/>
         </section>
     )
 }

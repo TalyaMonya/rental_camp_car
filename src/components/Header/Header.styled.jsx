@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.div`
   position: relative;
   z-index: 2;
-  height: 50px;
+  height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -19,6 +19,11 @@ export const Logo = styled(NavigationLink)`
   font-size: 500;
   text-decoration: none;
   color: ${(p) => p.theme.colors.red};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 `;
 
 export const NavContainer = styled.div`

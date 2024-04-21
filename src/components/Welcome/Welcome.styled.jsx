@@ -14,6 +14,7 @@ export const WrapperPage = styled.div`
     background-size: cover;
     margin: 0;
     padding: 0 20px;
+    padding-top: 50px;
 `;
 
 export const Title = styled.h1`

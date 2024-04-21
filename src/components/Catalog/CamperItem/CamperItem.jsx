@@ -7,6 +7,7 @@ import { StarSvg, LocationSvg, ListItem, Image, WrapperTitle, Title, WrapperPric
 import { addToFavorite, removeFromFavorite } from "../../../redux/catalogSlice";
 import sprite from "../../../assets/sprite.svg";
 import { ModalShowMore } from "../../Modal/Modal";
+import "../../Modal/Modal.css";
 
 
 export const CampersItem = ({value}) => {

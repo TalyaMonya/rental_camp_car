@@ -17,6 +17,7 @@ export const CloseModal = styled.button`
 export const CrossIcon = styled.svg`
   width: 32px;
   height: 32px;
+  stroke: black;
 `;
 
 export const Title = styled.h2`
@@ -166,3 +167,18 @@ export const ExpandedContetnWrapp = styled.div`
   display: flex;
   gap: 24px;
 `;
+
+export const ModalContent = styled.div`
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(-180px + 100vh);
+    width: 100%;
+    max-width: 982px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 40px;
+    overflow-y: auto;
+    z-index: 900;
+`

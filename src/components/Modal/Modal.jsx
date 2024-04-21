@@ -3,7 +3,7 @@ import "./Modal.css";
 import sprite from "../../assets/sprite.svg";
 import { BsFillStarFill as YellowStar } from "react-icons/bs";
 import { useState } from "react";
-import { BtnWrapper, CardInfo, CloseModal, CrossIcon, Description, ExpandedContetnWrapp, FeaturesBtn, GalleryImg, GalleryItem, GalleryList, IconLine, Location, Price, Radio, RadioWrapper, Reviews, Title, Wrapp } from "./Modal.styled";
+import { BtnWrapper, CardInfo, CloseModal, CrossIcon, Description, ExpandedContetnWrapp, FeaturesBtn, GalleryImg, GalleryItem, GalleryList, IconLine, Location, ModalContent, Price, Radio, RadioWrapper, Reviews, Title, Wrapp } from "./Modal.styled";
 import { Features } from "../Features/Features";
 import { Reviews as ReviewsList } from "../Reviews/Reviews";
 import { CamperForm } from "../CamperForm/CamperForm";
@@ -40,9 +40,10 @@ export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
                     setOpenReviews(false);
                 }}
                 contentLabel="More info modal">
+            <ModalContent>
                 <CloseModal onClick={setModalClose}>
                     <CrossIcon>
-                        <use xlinkHref={sprite + "icon-cross"}></use>
+                        <use xlinkHref={sprite + "#icon-close"}></use>
                     </CrossIcon>
                 </CloseModal>
 
@@ -105,6 +106,7 @@ export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
                         </>
                     )}
                 </ExpandedContetnWrapp>
+                </ModalContent>
             </Modal>
     
     )

@@ -1,6 +1,6 @@
 import Modal from "react-modal";
-import sprite from "../../assets/sprite.svg";
 import "./Modal.css";
+import sprite from "../../assets/sprite.svg";
 import { BsFillStarFill as YellowStar } from "react-icons/bs";
 import { useState } from "react";
 import { BtnWrapper, CardInfo, CloseModal, CrossIcon, Description, ExpandedContetnWrapp, FeaturesBtn, GalleryImg, GalleryItem, GalleryList, IconLine, Location, Price, Radio, RadioWrapper, Reviews, Title, Wrapp } from "./Modal.styled";
@@ -30,12 +30,12 @@ export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
     const priceValue = price.toFixed(2).replace(".", ",");
 
     return (
-        <>
-            <Modal
-                overlayClassName="Modal-overlay"
-                className="Modal-content"
-                isOpen={isModalOpen}
-                onRequestClose={() => {
+        
+        <Modal
+            overlayClassName="Modal-overlay"
+            className="Modal-content"
+            isOpen={isModalOpen}
+            onRequestClose={() => {
                     setOpenFeature(false);
                     setOpenReviews(false);
                 }}
@@ -106,6 +106,6 @@ export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
                     )}
                 </ExpandedContetnWrapp>
             </Modal>
-        </>
+    
     )
 }

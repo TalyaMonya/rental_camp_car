@@ -6,12 +6,12 @@ import { useState } from "react";
 import { BtnWrapper, CardInfo, CloseModal, CrossIcon, Description, ExpandedContetnWrapp, FeaturesBtn, GalleryImg, GalleryItem, GalleryList, IconLine, Location, Price, Radio, RadioWrapper, Reviews, Title, Wrapp } from "./Modal.styled";
 import { Features } from "../Features/Features";
 import { Reviews as ReviewsList } from "../Reviews/Reviews";
-// import { CamperForm } from "../CamperForm/CamperForm";
+import { CamperForm } from "../CamperForm/CamperForm";
 
 
 Modal.setAppElement("#modal");
 
-export const ModalShowMore = ({ isOpenModal, setCloseModal, data }) => {
+export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
     const [openFeature, setOpenFeature] = useState(false);
     const [openReviews, setOpenReviews] = useState(false);
 
@@ -25,8 +25,6 @@ export const ModalShowMore = ({ isOpenModal, setCloseModal, data }) => {
         setOpenFeature(false);
     };
 
-    console.log(data);
-
     const { name, price, rating, reviews, description, gallery, location } = data;
 
     const priceValue = price.toFixed(2).replace(".", ",");
@@ -36,13 +34,13 @@ export const ModalShowMore = ({ isOpenModal, setCloseModal, data }) => {
             <Modal
                 overlayClassName="Modal-overlay"
                 className="Modal-content"
-                isOpen={isOpenModal}
+                isOpen={isModalOpen}
                 onRequestClose={() => {
                     setOpenFeature(false);
                     setOpenReviews(false);
                 }}
                 contentLabel="More info modal">
-                <CloseModal onClick={setCloseModal}>
+                <CloseModal onClick={setModalClose}>
                     <CrossIcon>
                         <use xlinkHref={sprite + "icon-cross"}></use>
                     </CrossIcon>
@@ -97,13 +95,13 @@ export const ModalShowMore = ({ isOpenModal, setCloseModal, data }) => {
                     {openFeature && (
                         <>
                             <Features data={data} />
-                            {/* <CamperForm/> */}
+                            <CamperForm/>
                         </>
                     )}
                     {openReviews && (
                         <>
-                            <ReviewsList/>
-                            {/* <CamperForm/> */}
+                            <ReviewsList data={data} />
+                            <CamperForm/>
                         </>
                     )}
                 </ExpandedContetnWrapp>

@@ -1,10 +1,10 @@
-import { HeaderContainer, Logo, NavContainer, NavLink } from "./Header.styled";
+import { Logo, Nav, NavContainer, NavLink } from "./Navigation.styled";
 import sprite from "../../assets/sprite.svg"
 
-export const Header = () => {
+export const Navigation = () => {
   return (
     <>
-      <HeaderContainer>
+      <Nav>
           <Logo to="/">
             <svg width="40" height="40" fill="#E44848">
             <use xlinkHref={sprite + "#icon-van"}></use>
@@ -14,7 +14,7 @@ export const Header = () => {
           <NavLink to="/catalog">Catalog</NavLink>
           <NavLink to="/favorites">Favorites</NavLink>
         </NavContainer>
-      </HeaderContainer>
+      </Nav>
     </>
   )
 }

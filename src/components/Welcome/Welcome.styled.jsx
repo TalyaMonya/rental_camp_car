@@ -5,16 +5,12 @@ import { NavLink as Navigate } from "react-router-dom";
 
 export const WrapperPage = styled.div`
     position: absolute;
-    top: 50px;
     height: 100vh;
     width: 100%;
     background-image: url(${BckgImg});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: 0;
-    padding: 0 20px;
-    padding-top: 50px;
 `;
 
 export const Title = styled.h1`
@@ -32,6 +28,7 @@ display: flex;
     background-color: ${(p) => p.theme.colors.lightgrey};
     border-radius: 33px;
     margin-bottom: 70px;
+    margin-left: 20px;
 `;
 
 export const Quote = styled.p`

@@ -7,4 +7,5 @@ export const WrapperCatalog = styled.section`
     display: flex;
     justify-content: center;
     gap: 64px;
+    margin-top: 20px;
 `;

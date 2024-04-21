@@ -1,4 +1,4 @@
-import{u as t,N as r,j as e}from"./index-adf564a4.js";const n="/rental_camp_car/assets/background-0a7006a3.jpeg",a=t.div`
+import{u as t,N as r,j as e}from"./index-24962ecc.js";const n="/rental_camp_car/assets/background-0a7006a3.jpeg",a=t.div`
     position: absolute;
     top: 50px;
     height: 100vh;
@@ -9,6 +9,7 @@ import{u as t,N as r,j as e}from"./index-adf564a4.js";const n="/rental_camp_car/
     background-size: cover;
     margin: 0;
     padding: 0 20px;
+    padding-top: 50px;
 `,i=t.h1`
     font-size: 35px;
     max-width: 660px;

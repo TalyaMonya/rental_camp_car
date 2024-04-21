@@ -7,7 +7,7 @@ export const Features = ({ data }) => {
     const { details } = data;
 
     const detailsFilter = Object.entries(details).filter(
-        ([key, value]) => value !== 0 || value !== "");
+        ([value]) => value !== 0 || value !== "");
 
     const iconSet = {
         CD: (

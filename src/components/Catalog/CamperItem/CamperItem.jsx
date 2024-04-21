@@ -44,7 +44,29 @@ export const CampersItem = ({value}) => {
         gallery,
         reviews,
     } = value;
-    
+
+    const heartIconSvg = (
+        <svg
+            width="24"
+            height="24"
+            onClick={() => {
+                dispatch(addToFavorite(value));
+            }}>
+            <use xlinkHref={sprite + "#icon-heart"}></use>
+        </svg>
+    );
+
+    const redHeartIconSvg = (
+        <svg
+            width="24"
+            height="24"
+            onClick={() => {
+                dispatch(removeFromFavorite(value));
+            }}>
+            <use xlinkHref={sprite + "#icon-heart-red"}></use>
+        </svg>
+    );
+
     const priceValue = price.toFixed(2).replace(".", ",");
 
     return (
@@ -57,23 +79,7 @@ export const CampersItem = ({value}) => {
                         <WrapperPrice>
                             <Price>€{priceValue}</Price>
                             <WrapperHeart>
-                                {isFavoriteCard ?
-                                (<svg
-                                    width="24"
-                                    height="24"
-                                    onClick={() => {
-                                    dispatch(removeFromFavorite(value));
-                                     }}>
-                                        <use xlinkHref={sprite + "#icon-heart-red"}></use>
-                                    </svg>) :
-                                    (<svg
-                                    width="24"
-                                    height="24"
-                                    onClick={() => {
-                                    dispatch(addToFavorite(value));}}>
-                                        <use xlinkHref={sprite + "#icon-heart"}></use>
-                                    </svg>)
-                                }
+                                {isFavoriteCard ? redHeartIconSvg : heartIconSvg}
                             </WrapperHeart>
                         </WrapperPrice>
                     </WrapperTitle>

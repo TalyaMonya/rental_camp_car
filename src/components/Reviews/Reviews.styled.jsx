@@ -20,6 +20,7 @@ export const Head = styled.div`
 export const Avatar = styled.span`
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
     border-radius: 60px;

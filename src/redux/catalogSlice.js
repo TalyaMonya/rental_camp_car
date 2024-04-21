@@ -38,7 +38,6 @@ const catalogSlice = createSlice({
         },
         setFilters(state, action) {
             const { value, checked } = action.payload;
-            console.log(action);
             const [category, filter] = value.split("_");
 
             state.filters[category][filter] = checked;

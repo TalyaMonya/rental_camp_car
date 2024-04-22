@@ -1,4 +1,4 @@
-import{u as t,N as r,j as e}from"./index-edbc0334.js";const n="/rental_camp_car/assets/background-0a7006a3.jpeg",a=t.div`
+import{u as t,N as r,j as e}from"./index-779f6beb.js";const n="/rental_camp_car/assets/background-0a7006a3.jpeg",a=t.div`
     position: absolute;
     height: 100vh;
     width: 100%;

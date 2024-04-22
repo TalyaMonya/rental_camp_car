@@ -36,6 +36,7 @@ export const ModalShowMore = ({ isModalOpen, setModalClose, data }) => {
             className="Modal-content"
             isOpen={isModalOpen}
             onRequestClose={() => {
+                setModalClose();
                     setOpenFeature(false);
                     setOpenReviews(false);
                 }}

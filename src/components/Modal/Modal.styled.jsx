@@ -81,7 +81,10 @@ export const GalleryItem = styled.li`
 
 export const GalleryImg = styled.img`
   border-radius: 10px;
-  height: 100%;
+  
+  width: 100%;
+    height: 100%;
+    object-fit: cover;	
 `;
 
 export const FeaturesBtn = styled.span`
@@ -174,7 +177,6 @@ export const ModalContent = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: calc(-180px + 100vh);
-    width: 100%;
     max-width: 982px;
     border-radius: 20px;
     background-color: #ffffff;
